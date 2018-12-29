@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://itroi.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://itroi.com" xmlns:intf="http://itroi.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://itroi.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="addTask">
+    <complexType>
+     <sequence>
+      <element name="userName" type="xsd:string"/>
+      <element name="title" type="xsd:string"/>
+      <element name="description" type="xsd:string"/>
+      <element name="startDate" type="xsd:string"/>
+      <element name="finishDate" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addTaskResponse">
+    <complexType>
+     <sequence>
+      <element name="addTaskReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteTaskByUsernameAndTitle">
+    <complexType>
+     <sequence>
+      <element name="userName" type="xsd:string"/>
+      <element name="title" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteTaskByUsernameAndTitleResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteTaskByUsernameAndTitleReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeTaskByUsernameAndTitle">
+    <complexType>
+     <sequence>
+      <element name="userName" type="xsd:string"/>
+      <element name="title" type="xsd:string"/>
+      <element name="description" type="xsd:string"/>
+      <element name="startDate" type="xsd:string"/>
+      <element name="finishDate" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeTaskByUsernameAndTitleResponse">
+    <complexType>
+     <sequence>
+      <element name="changeTaskByUsernameAndTitleReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="allTask">
+    <complexType/>
+   </element>
+   <element name="allTaskResponse">
+    <complexType>
+     <sequence>
+      <element name="allTaskReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="dropTask">
+    <complexType/>
+   </element>
+   <element name="dropTaskResponse">
+    <complexType>
+     <sequence>
+      <element name="dropTaskReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteTaskById">
+    <complexType>
+     <sequence>
+      <element name="idTask" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteTaskByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteTaskByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeTaskById">
+    <complexType>
+     <sequence>
+      <element name="idTask" type="xsd:int"/>
+      <element name="description" type="xsd:string"/>
+      <element name="startDate" type="xsd:string"/>
+      <element name="finishDate" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="changeTaskByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="changeTaskByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="deleteTaskByUsernameAndTitleRequest">
+
+      <wsdl:part element="impl:deleteTaskByUsernameAndTitle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="allTaskRequest">
+
+      <wsdl:part element="impl:allTask" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeTaskByIdResponse">
+
+      <wsdl:part element="impl:changeTaskByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteTaskByIdRequest">
+
+      <wsdl:part element="impl:deleteTaskById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeTaskByIdRequest">
+
+      <wsdl:part element="impl:changeTaskById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="allTaskResponse">
+
+      <wsdl:part element="impl:allTaskResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addTaskRequest">
+
+      <wsdl:part element="impl:addTask" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addTaskResponse">
+
+      <wsdl:part element="impl:addTaskResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeTaskByUsernameAndTitleResponse">
+
+      <wsdl:part element="impl:changeTaskByUsernameAndTitleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeTaskByUsernameAndTitleRequest">
+
+      <wsdl:part element="impl:changeTaskByUsernameAndTitle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dropTaskRequest">
+
+      <wsdl:part element="impl:dropTask" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteTaskByIdResponse">
+
+      <wsdl:part element="impl:deleteTaskByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteTaskByUsernameAndTitleResponse">
+
+      <wsdl:part element="impl:deleteTaskByUsernameAndTitleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="dropTaskResponse">
+
+      <wsdl:part element="impl:dropTaskResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TaskManagerImp">
+
+      <wsdl:operation name="addTask">
+
+         <wsdl:input message="impl:addTaskRequest" name="addTaskRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addTaskResponse" name="addTaskResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteTaskByUsernameAndTitle">
+
+         <wsdl:input message="impl:deleteTaskByUsernameAndTitleRequest" name="deleteTaskByUsernameAndTitleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteTaskByUsernameAndTitleResponse" name="deleteTaskByUsernameAndTitleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeTaskByUsernameAndTitle">
+
+         <wsdl:input message="impl:changeTaskByUsernameAndTitleRequest" name="changeTaskByUsernameAndTitleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:changeTaskByUsernameAndTitleResponse" name="changeTaskByUsernameAndTitleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="allTask">
+
+         <wsdl:input message="impl:allTaskRequest" name="allTaskRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:allTaskResponse" name="allTaskResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dropTask">
+
+         <wsdl:input message="impl:dropTaskRequest" name="dropTaskRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:dropTaskResponse" name="dropTaskResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteTaskById">
+
+         <wsdl:input message="impl:deleteTaskByIdRequest" name="deleteTaskByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteTaskByIdResponse" name="deleteTaskByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeTaskById">
+
+         <wsdl:input message="impl:changeTaskByIdRequest" name="changeTaskByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:changeTaskByIdResponse" name="changeTaskByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TaskManagerImpSoapBinding" type="impl:TaskManagerImp">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addTask">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addTaskRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addTaskResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteTaskByUsernameAndTitle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteTaskByUsernameAndTitleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteTaskByUsernameAndTitleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeTaskByUsernameAndTitle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeTaskByUsernameAndTitleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeTaskByUsernameAndTitleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="allTask">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="allTaskRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="allTaskResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="dropTask">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="dropTaskRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="dropTaskResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteTaskById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteTaskByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteTaskByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeTaskById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeTaskByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeTaskByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TaskManagerImpService">
+
+      <wsdl:port binding="impl:TaskManagerImpSoapBinding" name="TaskManagerImp">
+
+         <wsdlsoap:address location="http://localhost:8080/INROI_LB_3_4_5/services/TaskManagerImp"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
